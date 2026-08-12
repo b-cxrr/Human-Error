@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://dvvtaonyd4x1u"]
+
+[ext_resource type="Script" uid="uid://najq3d3gr2oo" path="res://Scripts/game.gd" id="1_jjgbg"]
+[ext_resource type="AudioStream" uid="uid://d2r5oa8n3e8l4" path="res://Sounds/Reaction_Tile_Click_01.wav" id="2_kry3j"]
+[ext_resource type="AudioStream" uid="uid://b2kohuhksgngq" path="res://Sounds/Wrong_Tile_01.wav" id="3_21xkr"]
+[ext_resource type="AudioStream" uid="uid://b2u737h0m5nlk" path="res://Sounds/Perfect_01.wav" id="4_6bp64"]
+[ext_resource type="AudioStream" uid="uid://cuogfxnsh17cy" path="res://Sounds/Reaction_Celebration_01.wav" id="5_344ge"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bo1nx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjvhh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8gbba"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kry3j"]
+
+[node name="Game" type="Control" unique_id=2055090889]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jjgbg")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1170215692]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.45262197, 0.45262197, 0.45262197, 0.44705883)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=390946722]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1493709760]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=320150765]
+layout_mode = 2
+theme_override_font_sizes/font_size = 52
+text = "REACTION"
+horizontal_alignment = 1
+
+[node name="RoundLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1996776998]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "ROUND 0"
+horizontal_alignment = 1
+
+[node name="InstructionLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1067050714]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "PRESS  START"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=394745552]
+custom_minimum_size = Vector2(0, 900)
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="Tile0" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=787979575]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_bo1nx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jjvhh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8gbba")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kry3j")
+text = "1"
+
+[node name="Tile1" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=948986840]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_bo1nx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jjvhh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8gbba")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kry3j")
+text = "2"
+
+[node name="Tile2" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=808925414]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_bo1nx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jjvhh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8gbba")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kry3j")
+text = "3"
+
+[node name="Tile3" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=635428530]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_bo1nx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jjvhh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8gbba")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kry3j")
+text = "4"
+
+[node name="TimeLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=36407379]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "TIME : ---"
+horizontal_alignment = 1
+
+[node name="ReactionLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1132114777]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "REACTION: ---"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1286347483]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "SCORE: 0"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2046364347]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "START"
+
+[node name="TileClickSound" type="AudioStreamPlayer" parent="." unique_id=1747965811]
+stream = ExtResource("2_kry3j")
+max_polyphony = 8
+
+[node name="WrongSound" type="AudioStreamPlayer" parent="." unique_id=181517961]
+stream = ExtResource("3_21xkr")
+
+[node name="PerfectSound" type="AudioStreamPlayer" parent="." unique_id=1436224098]
+stream = ExtResource("4_6bp64")
+
+[node name="EndRunSound" type="AudioStreamPlayer" parent="." unique_id=1907063996]
+stream = ExtResource("5_344ge")
